@@ -17,8 +17,7 @@ body {
     background: url('https://dl.dropboxusercontent.com/scl/fi/qw1865k7ikft0s8e46gob/stars-1837306_1280.jpg?rlkey=xpcpvs4vh0lsnwf5mtt4flavd&st=u0hbp1ip') no-repeat center center fixed;
     background-size: cover; /* Ensures the background covers the entire viewport */
     min-height: 100vh;
-    padding: 20px;
-    box-sizing: border-box; /* Ensures padding is included in the width and height */
+    padding: 20px; /* Add padding to the body for mobile spacing */
 }
 
 header {
@@ -51,21 +50,23 @@ section {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     margin: 20px auto;
-    width: 90%;
+    width: 80%;
     max-width: 800px; /* Ensure it doesn’t get too wide on large screens */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    box-sizing: border-box; /* Prevents overflow issues */
 }
 
 /* Footer */
 footer {
     text-align: center;
     font-weight: bold;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for readability */
+    padding: 15px 20px; /* Adjusted padding to ensure proper alignment */
+    background-color: rgba(0, 0, 0, 0.7); /* Match the background color of the sections */
     width: 100%;
-    box-sizing: border-box; /* Prevents overflow issues */
+    max-width: 800px; /* Match max-width with the sections */
+    margin: 20px auto; /* Center the footer */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Mobile Styles */
@@ -78,7 +79,6 @@ footer {
         width: 100%;
         margin: 10px auto;
         padding: 15px;
-        box-sizing: border-box; /* Ensures padding doesn't cause overflow */
     }
 
     .profile-image {
@@ -97,34 +97,9 @@ footer {
     p {
         font-size: 16px;
     }
-}
-
-/* iPhone 12 Pro with 390 x 844 resolution */
-@media (max-width: 390px) {
-    .profile-image {
-        width: 80px;
-        height: 80px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    section {
-        padding: 10px;
-        box-sizing: border-box; /* Prevents overflow issues */
-    }
 
     footer {
-        padding: 10px;
-        font-size: 14px;
+        padding: 15px 10px; /* Ensure proper spacing on mobile */
+        width: 100%;
     }
 }
