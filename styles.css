@@ -11,37 +11,19 @@ html, body {
 /* Body Styles with Direct Background */
 body {
     font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     color: #ffffff;
     background-color: #000428; /* Fallback background color */
     background: url('https://dl.dropboxusercontent.com/scl/fi/qw1865k7ikft0s8e46gob/stars-1837306_1280.jpg?rlkey=xpcpvs4vh0lsnwf5mtt4flavd&st=u0hbp1ip') no-repeat center center fixed;
     background-size: cover; /* Ensures the background covers the entire viewport */
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; /* Add padding to the body for mobile spacing */
-}
-
-/* Wrapper for all content */
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 800px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     padding: 20px;
+    box-sizing: border-box; /* Ensures padding is included in the width and height */
 }
 
-/* Header styles */
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
 }
 
 .profile-image {
@@ -49,39 +31,41 @@ header {
     height: 150px;
     border-radius: 50%;
     border: 5px solid #ffffff;
-    object-fit: cover;
+    margin-bottom: 10px;
+    object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
 }
 
-h1 {
-    font-size: 28px;
-    margin-top: 10px;
+h1, h2 {
+    color: #ffcc00;
 }
 
 h2 {
-    color: #ffcc00;
     margin-top: 20px;
-    font-size: 22px;
-}
-
-/* Sections */
-section {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 p {
-    font-size: 18px;
     margin-bottom: 20px;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px; /* Ensure it doesn’t get too wide on large screens */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box; /* Prevents overflow issues */
 }
 
 /* Footer */
 footer {
     text-align: center;
     font-weight: bold;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for readability */
     width: 100%;
+    box-sizing: border-box; /* Prevents overflow issues */
 }
 
 /* Mobile Styles */
@@ -90,24 +74,57 @@ footer {
         padding: 10px;
     }
 
+    section {
+        width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+        box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+    }
+
     .profile-image {
         width: 100px;
         height: 100px;
     }
 
     h1 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     p {
         font-size: 16px;
     }
+}
+
+/* iPhone 12 Pro with 390 x 844 resolution */
+@media (max-width: 390px) {
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 10px;
+        box-sizing: border-box; /* Prevents overflow issues */
+    }
 
     footer {
+        padding: 10px;
         font-size: 14px;
     }
 }
