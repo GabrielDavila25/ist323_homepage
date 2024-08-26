@@ -13,9 +13,11 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #ffffff;
+    background-color: #000428; /* Fallback background color */
     background: url('https://dl.dropboxusercontent.com/scl/fi/qw1865k7ikft0s8e46gob/stars-1837306_1280.jpg?rlkey=xpcpvs4vh0lsnwf5mtt4flavd&st=u0hbp1ip') no-repeat center center fixed;
     background-size: cover; /* Ensures the background covers the entire viewport */
     min-height: 100vh;
+    padding: 20px; /* Add padding to the body for mobile spacing */
 }
 
 header {
@@ -29,6 +31,7 @@ header {
     border-radius: 50%;
     border: 5px solid #ffffff;
     margin-bottom: 10px;
+    object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
 }
 
 h1, h2 {
@@ -48,6 +51,7 @@ section {
     padding: 20px;
     margin: 20px auto;
     width: 80%;
+    max-width: 800px; /* Ensure it doesn’t get too wide on large screens */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
@@ -61,11 +65,33 @@ footer {
     width: 100%;
     position: relative;
 }
-.profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #ffffff;
-    margin-bottom: 10px;
-    object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
