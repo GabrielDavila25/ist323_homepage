@@ -20,6 +20,14 @@ body {
     padding: 20px; /* Add padding to the body for mobile spacing */
 }
 
+/* Fallback Background for Mobile Devices */
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll; /* Use scroll instead of fixed for mobile devices */
+        background-color: #000428; /* Ensure fallback background is consistent on mobile */
+    }
+}
+
 header {
     text-align: center;
     padding: 20px;
